@@ -7,13 +7,7 @@ page = 5
 blank = [ "____________________", "", "____________________" ]
 
 def replaceName(ff, number, val):
-    nombre = ""
-    if val[1] == "":
-        nombre = val[0]
-    else:
-        nombre = "%s (%s)" % (val[0], val[1])
-    ff=ff.replace('nombre'+number, nombre, 1)
-    ff=ff.replace('organizacion'+number, val[2], 1)
+    ff=ff.replace('nombre'+number, val[0], 1)
     return ff
 
 for i in range(0,len(names)/page+1):
