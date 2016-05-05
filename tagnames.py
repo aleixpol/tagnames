@@ -19,7 +19,7 @@ def replaceName(ff, number, val):
 for i in range(0,len(names)/page+1):
     idx = i * page
 
-    f = open('tagnames2016-martin.svg')
+    f = open('tagnames2016.svg')
     ff = f.read()
     if idx<len(names):
         ff = replaceName(ff, "1", names[idx].split('|'))
