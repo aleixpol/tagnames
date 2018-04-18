@@ -16,7 +16,7 @@ def replaceName(ff, number, val):
     ff=ff.replace('organizacion'+number, val[2], 1)
     return ff
 
-for i in range(0,len(names)/page+1):
+for i in range(0,len(names)//page+1):
     idx = i * page
 
     f = open('tagnames2016.svg')
@@ -41,7 +41,7 @@ for i in range(0,len(names)/page+1):
         ff = replaceName(ff, "5", names[idx+4].split('|'))
     else:
         ff = replaceName(ff, "5", blank)
-    print '--'
+    print('--')
 
     outputpath = 'akaes/tags%d.svg' % i
     towrite=open(outputpath, 'w')
